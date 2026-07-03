@@ -1,37 +1,48 @@
 pipeline {
+
     agent any
 
     stages {
 
         stage('Checkout') {
             steps {
-                echo 'Checking out source code...'
-                checkout scm
+                git branch: 'main', credentialsId: 'github-pat', url: 'https://github.com/Parimal-Pradhan/website-deployment.git'
             }
         }
 
         stage('Build') {
             steps {
-                echo 'Build completed.'
+                echo "Build Started"
+
+                sh '''
+                ls -la
+                '''
             }
         }
 
         stage('Test') {
             steps {
-                script {
-                    if (fileExists('index.html')) {
-                        echo 'index.html found.'
-                    } else {
-                        error('index.html not found!')
-                    }
-                }
+                echo "Testing HTML"
+
+                sh '''
+                if [ -f index.html ]; then
+                    echo "HTML Found"
+                else
+                    echo "No HTML"
+                    exit 1
+                fi
+                '''
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deployment stage will be implemented in Phase 5.'
+                sh '''
+                     cp -r * /var/www/html/
+                 '''
             }
         }
+
     }
+
 }
