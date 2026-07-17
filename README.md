@@ -1,8 +1,10 @@
-# Real estate
+# Real Estate - Website Deployment
 
-Yes, that makes much more sense for a **Git + Jenkins beginner project**. Since it's **just a static website (`index.html`)** deployed to an **EC2 instance running Apache2**, there's no need to introduce Docker, Kubernetes, Terraform, or Maven yet.
+<img width="1693" height="929" alt="ChatGPT Image Jul 17, 2026, 02_20_30 PM" src="https://github.com/user-attachments/assets/95b283dc-5cb6-4688-8459-e9a89cad4a71" />
 
-A real-world beginner DevOps pipeline for this project would look like this:
+
+## Step by Step Flow
+
 
 ```text
 Developer
@@ -323,21 +325,6 @@ Website Updated
 | http://EC2-Public-IP     |
 +--------------------------+
 ```
-
-## I recommend structuring this as **10 practical sprints** instead of 30 because this project is intentionally simple. The progression would be:
-
-1. Git Setup
-2. GitHub Repository
-3. Website Development
-4. Branching & Pull Requests
-5. Bug Fix & Tagging
-6. Jenkins Installation
-7. Jenkins + GitHub Integration
-8. EC2 + Apache Setup
-9. Jenkins Deployment to EC2
-10. Automatic Deployment Using GitHub Webhooks
-
-This keeps the project realistic, focused, and aligned with how a beginner-to-intermediate DevOps engineer would automate deployment of a static website to AWS EC2.
 
 
 <img width="1902" height="752" alt="image" src="https://github.com/user-attachments/assets/1e22efc9-7d25-4dc6-9afd-6d1a117700ba" />
