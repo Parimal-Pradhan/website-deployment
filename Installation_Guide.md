@@ -44,6 +44,40 @@
 ## Step : -9
 ### Insall Apache 
 
+Apache Installation
+===============================
+
+Install Apache:
+
+sudo apt install apache2 -y
+
+Start Apache:
+
+sudo systemctl enable apache2
+sudo systemctl start apache2
+
+Verify:
+
+sudo systemctl status apache2
+
+You should see:
+
+active (running)
+
+Open in a browser:
+
+http://PUBLIC-IP
+
+You should see the Apache default page.
+===============================================
+
+
+Step 3 – Remove Default Website
+sudo rm -rf /var/www/html/*
+
+sudo chown -R jenkins:jenkins /var/www/html
+
+
 <img width="1650" height="103" alt="image" src="https://github.com/user-attachments/assets/d6a0b3ec-16ef-4bc9-98bb-4a629dc923df" />
 
 ## Step : -10
