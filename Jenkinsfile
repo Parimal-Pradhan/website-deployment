@@ -6,7 +6,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', credentialsId: 'github-pat', url: 'https://github.com/Parimal-Pradhan/website-deployment.git'
+                git branch: 'masin', credentialsId: 'github-pat', url: 'https://github.com/Parimal-Pradhan/website-deployment.git'
             }
         }
 
